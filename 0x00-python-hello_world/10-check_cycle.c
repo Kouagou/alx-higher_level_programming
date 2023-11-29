@@ -14,10 +14,7 @@ int check_cycle(listint_t *list)
 	listint_t *current;
 
 	if (list == NULL)
-	{
-		free_listint(current);
 		return (1);
-	}
 
 	current = list->next;
 	while (current != NULL && current != list)
