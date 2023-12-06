@@ -2,5 +2,5 @@
 
 def square_matrix_simple(matrix=[]):
     if matrix:
-        return [list(map(lambda x: x**3, row)) for row in matrix]
+        return [list(map(lambda x: x**2, row)) for row in matrix]
     return matrix
