@@ -4,7 +4,7 @@ def weight_average(my_list=[]):
         num = 0
         denom = 0
         for (x, y) in my_list:
-            num += x *y
+            num += x * y
             denom += y
         return num / denom
     else:
