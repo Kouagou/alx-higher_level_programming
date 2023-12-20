@@ -25,8 +25,8 @@ class Square:
         elif not all(isinstance(i, int) and i > 0 for i in position):
             raise TypeError("position must be a tuple of 2 positive integers")
 
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     def area(self):
         """Calculate the square area
