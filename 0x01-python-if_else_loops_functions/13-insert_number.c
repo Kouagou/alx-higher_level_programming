@@ -33,28 +33,26 @@ listint_t *insert_node(listint_t **head, int number)
 
 		if (current->next == NULL)
 		{
-			/*printf("if 1 \n");*/
 			if (prev == NULL)
 			{
-				/*printf("if 1 if 1 \n");*/
 				new->next = current;
 			}
 			else
 			{
-				/*printf("if 1 else 1 \n");*/
 				new->next = NULL;
 				current->next = new;
 			}
 		} else
 		{
-			/*printf("else 1 \n");*/
+			printf("else 1 \n");
 			if (prev == NULL)
 			{
-				/*printf("else 1 if 1 \n");*/
+				printf("else 1 if 1 \n");
 				new->next = current;
+				*head = new;
 			} else
 			{
-				/*printf("else 1 else 1 \n");*/
+				printf("else 1 else 1 \n");
 				prev->next = new;
 				new->next = current;
 			}
