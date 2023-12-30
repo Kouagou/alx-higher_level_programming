@@ -49,7 +49,6 @@ listint_t *insert_node(listint_t **head, int number)
 			{
 				printf("else 1 if 1 \n");
 				new->next = current;
-				*head = new;
 			} else
 			{
 				printf("else 1 else 1 \n");
