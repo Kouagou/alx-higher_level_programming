@@ -55,6 +55,14 @@ class Rectangle:
         else:
             return rect_2
 
+    @classmethod
+    def square(cls, size=0):
+        """ Returns a new Rectangle instance with width == height == size
+        Args:
+            size - dimension of the square
+        """
+        return cls(size, size)
+
     @property
     def width(self):
         """ Retrieve the width value """
