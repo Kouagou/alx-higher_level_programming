@@ -9,7 +9,7 @@ def pascal_triangle(n):
     if n <= 0:
         return []
     pascal = []
-    for i in range(n + 1):
+    for i in range(n):
         tmp_list = []
         for j in range(i + 1):
             tmp_list.append(combinatorial(i, j))
