@@ -4,18 +4,18 @@ const argv = process.argv;
 if (len <= 3) {
   console.log(0);
 } else {
-  let max = argv[2];
-  let min = argv[3];
+  let max = Number(argv[2]);
+  let min = Number(argv[3]);
   if (max < min) {
-    max = argv[3];
-    min = argv[2];
+    max = Number(argv[3]);
+    min = Number(argv[2]);
   }
   for (let i = 3; i < len; i++) {
-    if (max < argv[i]) {
+    if (max < Number(argv[i])) {
       min = max;
-      max = argv[i];
-    } else if (min < argv[i]) {
-      min = argv[i];
+      max = Number(argv[i]);
+    } else if (min < Number(argv[i])) {
+      min = Number(argv[i]);
     }
   }
   console.log(min);
