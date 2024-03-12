@@ -10,7 +10,7 @@ if (len <= 3) {
     max = Number(argv[3]);
     min = Number(argv[2]);
   }
-  for (let i = 3; i < len; i++) {
+  for (let i = 4; i < len; i++) {
     if (max < Number(argv[i])) {
       min = max;
       max = Number(argv[i]);
