@@ -16,8 +16,7 @@ if __name__ == '__main__':
             cities INNER JOIN states ON cities.state_id = states.id \
             WHERE states.name = %s ORDER BY cities.id ASC", (argv[4],))
     rows = cur.fetchall()
-    for row in rows:
-        for col in row:
-            print("{}".format(col))
+    if rows is not None:
+        print(", ".join([row[0] for row in rows]))
     cur.close
     cnx.close()
