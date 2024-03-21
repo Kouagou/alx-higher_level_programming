@@ -16,11 +16,9 @@ if __name__ == "__main__":
     session = Session()
 
     states = session.query(State).outerjoin(City).order_by(State.id, City.id).all()
-    if states is not None:
-        for state in states:
-            print("{}: {}".format(state.id, state.name))
-            if state.cities is not None:
-                for city in state.cities:
-                    print("    {}: {}".format(city.id, city.name))
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("    {}: {}".format(city.id, city.name))
 
     session.close()
