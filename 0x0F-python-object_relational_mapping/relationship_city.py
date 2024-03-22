@@ -1,21 +1,14 @@
 #!/usr/bin/python3
+""" A  Python file similar to model_state.py named model_city.py
+    that contains the class definition of a City.
 """
-This script defines a City class
-to work with MySQLAlchemy ORM.
-"""
-
 from relationship_state import Base, State
 from sqlalchemy import Column, Integer, String, ForeignKey
 
 
 class City(Base):
-    """City class
-    Attributes:
-        __tablename__ (str): The table name of the class
-        id (int): The id of the class
-        name (str): The name of the class
-        state_id (int): The state the city belongs to
-    """
+    """ Defines City class """
+
     __tablename__ = 'cities'
 
     id = Column(Integer, primary_key=True)
