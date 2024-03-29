@@ -9,6 +9,6 @@ import requests
 
 if __name__ == "__main__":
     url = argv[1]
-    paylod = {'email': argv[2]}
+    payload = {'email': argv[2]}
     res = requests.post(url, data=payload)
     print(res.text)
