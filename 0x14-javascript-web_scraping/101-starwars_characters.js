@@ -15,9 +15,8 @@ request(url, function (error, response, body) {
           const json = JSON.parse(data);
           results[index] = json.name;
           if (results.filter(Boolean).length === film.characters.length) {
-	    results.forEach(name => console.log(name));
-	  }
-          // console.log(json.name);
+            results.forEach(name => console.log(name));
+          }
         }
       });
     });
